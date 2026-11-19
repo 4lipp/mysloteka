@@ -6,7 +6,7 @@
 <title>Myśloteka — studencki podcast o mózgu</title>
 <meta name="description" content="Myśloteka — studencki podcast Koła Kognitywistycznego (UMK Toruń): neuronauka, psychologia, technologia i przyszłość. Odcinki, aktualności redakcji i ekipa.">
 <link rel="canonical" href="https://xn--myloteka-nvb.pl/">
-<meta name="theme-color" content="#16041f">
+<meta name="theme-color" content="#0b171c">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Podgląd linku (Messenger, Instagram, Facebook, LinkedIn, X) -->
@@ -22,30 +22,52 @@
 <meta property="og:image:alt" content="Myśloteka — Gadamy o mózgu, żebyś nie musiał czytać podręczników.">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"PodcastSeries","name":"Myśloteka","url":"https://xn--myloteka-nvb.pl/","inLanguage":"pl","image":"https://xn--myloteka-nvb.pl/og-image.jpg","description":"Studencki podcast Koła Kognitywistycznego UMK w Toruniu o neuronauce, psychologii, technologii i przyszłości.","webFeed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCHzgAI61tfhDcQ3VBNRoFrg","sameAs":["https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo","https://www.youtube.com/@Mysloteka_TKK","https://www.instagram.com/mysloteka_podcast/"],"publisher":{"@type":"Organization","name":"Koło Kognitywistyczne UMK w Toruniu"}}
+{"@context":"https://schema.org","@type":"PodcastSeries","name":"Myśloteka","url":"https://xn--myloteka-nvb.pl/","inLanguage":"pl","image":"https://xn--myloteka-nvb.pl/og-image.jpg","description":"Studencki podcast Koła Kognitywistycznego UMK w Toruniu o neuronauce, psychologii, technologii i przyszłości.","webFeed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCHzgAI61tfhDcQ3VBNRoFrg","sameAs":["https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo","https://www.youtube.com/@Mysloteka_TKK","https://www.instagram.com/mysloteka_podcast/"],"publisher":{"@type":"Organization","name":"Koło Kognitywistyczne UMK w Toruniu","email":"podcast.mysloteka@gmail.com","telephone":"+48500813724","address":{"@type":"PostalAddress","streetAddress":"ul. Gagarina 39","postalCode":"87-100","addressLocality":"Toruń","addressCountry":"PL"}}}
 </script>
+<link rel="preload" href="hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* HK Grotesk — otwarta wersja (Hanken Grotesk, SIL OFL), pliki obok index.html */
+  @font-face { font-family: "HK Grotesk"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url(hanken-grotesk-latin-ext-wght-normal.woff2) format("woff2");
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: "HK Grotesk"; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url(hanken-grotesk-latin-wght-normal.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: "HK Grotesk"; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url(hanken-grotesk-latin-ext-wght-italic.woff2) format("woff2");
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: "HK Grotesk"; font-style: italic; font-weight: 100 900; font-display: swap;
+    src: url(hanken-grotesk-latin-wght-italic.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  /* Kolory z księgi znaku Myśloteki */
   :root {
-    --bg0: #16041f;
-    --bg1: #23052e;
-    --card: rgba(24, 5, 34, 0.82);
-    --line: rgba(255, 255, 255, 0.14);
+    --bg0: #0b171c;
+    --bg1: #0f2630;
+    --card: rgba(11, 30, 37, 0.84);
+    --line: rgba(255, 255, 255, 0.13);
     --cream: #faf0e2;
-    --muted: #c9b8d0;
-    --red: #d32f2f;
-    --red-soft: rgba(211, 47, 47, 0.16);
-    --gold: #e8b64c;
+    --muted: #b7cbd0;
+    --teal: #5493a3;          /* Podcast Myśloteka */
+    --teal-light: #79bccc;
+    --orange: #ff751f;        /* akcent */
+    --on-orange: #1d0e04;
+    --red: #ff751f;           /* (dawna czerwień — teraz pomarańcz marki) */
+    --red-soft: rgba(255, 117, 31, 0.14);
+    --gold: #ff9a57;
+    --fh: "HK Grotesk", "Hanken Grotesk", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    /* formaty */
+    --c-kogni: #a2ae98; --c-miks: #d2815b; --c-filip: #5aa2b3; --c-rozmowy: #d2ab94;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 120px; }
   body {
     margin: 0;
-    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    font-family: var(--fh);
     color: var(--cream);
     background:
-      radial-gradient(1100px 600px at 85% -10%, rgba(211, 47, 47, 0.14), rgba(211, 47, 47, 0) 60%),
-      radial-gradient(900px 700px at -10% 110%, rgba(150, 60, 190, 0.28), rgba(150, 60, 190, 0) 60%),
-      linear-gradient(112deg, #16041f 0%, #23052e 50%, #360a46 100%);
+      radial-gradient(1100px 600px at 85% -10%, rgba(255, 117, 31, 0.11), rgba(255, 117, 31, 0) 60%),
+      radial-gradient(900px 700px at -10% 110%, rgba(84, 147, 163, 0.30), rgba(84, 147, 163, 0) 60%),
+      linear-gradient(112deg, #0b171c 0%, #0f2630 50%, #133d4a 100%);
     background-attachment: fixed;
     min-height: 100vh;
     text-align: left;
@@ -54,7 +76,7 @@
   .masthead {
     position: sticky; top: 0; z-index: 40;
     backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    background: rgba(18, 3, 26, 0.86);
+    background: rgba(9, 22, 28, 0.88);
     border-bottom: 1px solid var(--line);
   }
   .mast-in {
@@ -62,9 +84,10 @@
     display: flex; align-items: center; gap: 14px;
   }
   .mast-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex: none; }
-  .mast-brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1px solid var(--red); background: #000; }
-  .mast-brand b { font-family: Georgia, serif; font-weight: 400; font-size: 20px; letter-spacing: .5px; }
-  .mast-brand small { display: block; font-size: 11px; color: var(--muted); font-family: inherit; letter-spacing: 2px; }
+  .mast-brand img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); background: var(--cream); box-shadow: 0 0 0 3px rgba(84,147,163,.35); }
+  .mast-brand .wm { display: flex; flex-direction: column; line-height: 1; }
+  .mast-brand b { font-family: var(--fh); font-weight: 800; font-style: italic; font-size: 23px; color: var(--teal-light); letter-spacing: -0.01em; }
+  .mast-brand small { display: block; font-size: 14px; font-weight: 500; color: var(--cream); letter-spacing: .3px; margin-bottom: 2px; }
   nav.sections { display: flex; gap: 2px; margin-left: 8px; overflow-x: auto; scrollbar-width: none; }
   nav.sections::-webkit-scrollbar { display: none; }
   nav.sections a {
@@ -72,15 +95,15 @@
     padding: 8px 12px; border-radius: 999px; white-space: nowrap;
   }
   nav.sections a:hover { color: #fff; background: rgba(255,255,255,.07); }
-  nav.sections a.spy { color: #fff; background: var(--red); }
+  nav.sections a.spy { color: var(--on-orange); background: var(--orange); }
   .mast-cta { margin-left: auto; flex: none; }
   .btn {
     border: none; border-radius: 12px; padding: 10px 18px; font-size: 14px;
-    font-weight: 700; cursor: pointer; color: #fff; background: var(--red);
+    font-weight: 700; cursor: pointer; color: var(--on-orange); background: var(--orange);
     text-decoration: none; display: inline-block;
   }
   .btn:hover { filter: brightness(1.12); }
-  .btn.ghost { background: rgba(255, 255, 255, 0.1); border: 1px solid var(--line); font-weight: 400; }
+  .btn.ghost { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--line); font-weight: 500; color: var(--cream); }
   .btn.yt { background: #faf0e2; color: #1a0624; display: inline-flex; align-items: center; gap: 8px; }
   .btn.yt svg { width: 22px; height: 22px; flex: none; }
   .btn.danger { background: #7a1010; }
@@ -89,19 +112,19 @@
   .ticker {
     position: relative;
     border-bottom: 1px solid var(--line);
-    background: rgba(211, 47, 47, 0.1);
+    background: rgba(84, 147, 163, 0.12);
     overflow: hidden; white-space: nowrap;
   }
   .ticker .lane { display: inline-block; padding: 7px 0; animation: tick 28s linear infinite; }
   .ticker .lane.paused { animation-play-state: paused; }
   .tick-btn {
     position: absolute; right: 8px; top: 50%; transform: translateY(-50%); z-index: 2;
-    background: rgba(20, 4, 28, 0.92); border: 1px solid var(--line); border-radius: 20px;
+    background: rgba(9, 22, 28, 0.92); border: 1px solid var(--line); border-radius: 20px;
     color: var(--cream); font-size: 12px; letter-spacing: 1px; padding: 4px 12px; cursor: pointer; min-height: 28px;
   }
   .tick-btn:hover { border-color: var(--red); }
   .ticker span { font-size: 12px; letter-spacing: 1px; color: var(--cream); padding-right: 60px; }
-  .ticker b { color: #ff8a8a; }
+  .ticker b { color: #ffa366; }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .wrap { max-width: 1180px; margin: 0 auto; padding: 26px 22px 60px; position: relative; z-index: 1; }
   /* ---------- winyle w tle ---------- */
@@ -109,7 +132,7 @@
   .vinyl-spin { will-change: transform; }
   .vinyl-img {
     border-radius: 50%; display: block;
-    box-shadow: 0 0 170px rgba(211,47,47,.32), inset 0 0 60px rgba(0,0,0,.7);
+    box-shadow: 0 0 170px rgba(84,147,163,.35), inset 0 0 60px rgba(0,0,0,.7);
   }
   .vinyl.v1 { right: -190px; top: -30px; opacity: .65; }
   .vinyl.v1 .vinyl-img { width: 480px; height: 480px; }
@@ -119,28 +142,33 @@
   /* ---------- hero ---------- */
   .hero {
     position: relative; border-radius: 26px; overflow: hidden;
-    border: 1px solid var(--line); min-height: 420px;
+    border: 1px solid var(--line); min-height: 470px;
     display: flex; align-items: flex-end;
   }
   .hero img.bg {
     position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     animation: heroZoom 9s ease-out forwards;
+    filter: hue-rotate(-112deg) saturate(.8) brightness(.95);
   }
   @keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
   .hero .shade {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(20,2,30,.02) 25%, rgba(20,2,30,.9) 100%),
-      linear-gradient(90deg, rgba(20,2,30,.55) 0%, rgba(20,2,30,0) 60%);
+    background: linear-gradient(180deg, rgba(8,20,25,.05) 25%, rgba(8,20,25,.9) 100%),
+      linear-gradient(90deg, rgba(8,20,25,.6) 0%, rgba(8,20,25,0) 60%);
   }
   .hero .cap { position: relative; padding: 34px; max-width: 660px; }
   .kicker {
     display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 3px;
-    color: #ffb3b3; border: 1px solid var(--red); border-radius: 999px;
-    padding: 5px 14px; margin-bottom: 12px; background: rgba(211,47,47,.18);
+    color: #ffc29a; border: 1px solid var(--orange); border-radius: 999px;
+    padding: 5px 14px; margin-bottom: 12px; background: rgba(255,117,31,.16);
   }
-  .hero .cap h1 { font-family: Georgia, serif; font-weight: 400; font-size: 40px; margin: 0 0 10px; line-height: 1.1; }
+  .hero .cap h1 { font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; font-size: 40px; margin: 0 0 10px; line-height: 1.1; }
   .hero .cap p { margin: 0 0 20px; color: var(--cream); font-size: 15px; line-height: 1.65; opacity: .92; }
   .hero .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero-brand { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 16px; }
+  .hero-brand .kicker { margin-bottom: 0; }
+  .hero-logo { width: 112px; height: 112px; border-radius: 50%; background: var(--cream); border: 3px solid var(--cream); box-shadow: 0 0 0 4px rgba(84,147,163,.55), 0 12px 40px rgba(0,0,0,.45); }
+  .hero .cap h1 em { font-style: italic; color: var(--teal-light); }
   .hero .cap { flex: 1 1 auto; }
   .hero-side { position: relative; flex: none; padding: 0 34px 34px; text-align: center; }
   .hero-vinyl {
@@ -149,18 +177,18 @@
   }
   .hero-vinyl img {
     width: 100%; height: 100%; border-radius: 50%; display: block;
-    box-shadow: 0 0 60px rgba(0,0,0,.6), 0 0 90px rgba(211,47,47,.25);
+    box-shadow: 0 0 60px rgba(0,0,0,.6), 0 0 90px rgba(84,147,163,.3);
     animation: herospin 16s linear infinite;
   }
   .hero-vinyl:hover img { filter: brightness(1.1); }
   @keyframes herospin { to { transform: rotate(360deg); } }
   .hp-play {
     position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-    width: 64px; height: 64px; border-radius: 50%; background: rgba(211,47,47,.92); color: #fff;
+    width: 64px; height: 64px; border-radius: 50%; background: var(--orange); color: var(--on-orange);
     font-size: 24px; display: flex; align-items: center; justify-content: center;
-    border: 2px solid rgba(255,255,255,.85); pointer-events: none;
+    border: 2px solid rgba(250,240,226,.9); pointer-events: none;
   }
-  .hero-vinyl:hover .hp-play { background: #d32f2f; }
+  .hero-vinyl:hover .hp-play { background: #ff8a40; }
   .hp-note { margin-top: 10px; font-size: 12px; color: var(--cream); opacity: .85; max-width: 230px; line-height: 1.5; }
   .hero-player iframe { width: min(420px, 100%); aspect-ratio: 16/9; border: 0; border-radius: 16px; background: #000; }
   .hero-player .hp-note { max-width: 420px; }
@@ -173,13 +201,13 @@
   .stats {
     display: flex; gap: 26px; flex-wrap: wrap; margin: 22px 2px 0; color: var(--muted); font-size: 13px;
   }
-  .stats b { color: var(--cream); font-size: 20px; display: block; font-family: Georgia, serif; font-weight: 400; }
+  .stats b { color: var(--teal-light); font-size: 26px; display: block; font-family: var(--fh); font-weight: 800; letter-spacing: -0.01em; }
   /* ---------- nagłówki sekcji ---------- */
   .sec-head { margin: 56px 0 6px; }
-  .sec-head h1, .sec-head h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 6px; }
+  .sec-head h1, .sec-head h2 { font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; font-size: 30px; margin: 0 0 6px; }
   .sec-head h2.sub { font-size: 23px; }
-  .sec-head p { color: var(--muted); font-size: 14px; margin: 0; }
-  .rule { height: 1px; background: linear-gradient(90deg, var(--red), transparent); margin: 14px 0 20px; opacity: .6; }
+  .sec-head p { color: var(--muted); font-size: 15px; margin: 0; }
+  .rule { height: 2px; background: linear-gradient(90deg, var(--orange), var(--teal) 35%, transparent); margin: 14px 0 20px; opacity: .6; }
   /* ---------- pojawianie się przy scrollu ---------- */
   .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
   .rv.on { opacity: 1; transform: none; }
@@ -190,24 +218,29 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
   }
   .feat .txt { padding: 28px 30px; }
-  .feat .txt h2, .feat .txt h3 { font-family: Georgia, serif; font-weight: 400; font-size: 27px; margin: 8px 0 10px; line-height: 1.2; }
+  .feat .txt h2, .feat .txt h3 { font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; font-size: 27px; margin: 8px 0 10px; line-height: 1.2; }
   .feat .txt p { font-size: 14px; line-height: 1.7; color: var(--cream); opacity: .92; margin: 0 0 16px; white-space: pre-wrap; }
   .feat .img { min-height: 260px; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
   .ncard { overflow: hidden; }
-  #miniNews .ncard p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: 1 0 auto; }
+  .ncard .nimg-wrap { display: block; margin: -20px -22px 14px; }
+  .ncard .nimg-wrap .nimg { margin: 0; width: 100%; }
+  .ncard .nimg-wrap:hover .nimg { filter: brightness(1.08); }
+  #miniNews .ncard p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: none; }
+  #miniNews .ncard .row { margin-top: auto; }
   .ncard .nimg { display: block; width: calc(100% + 44px); height: auto; max-width: none; margin: -20px -22px 14px; aspect-ratio: 16/9; object-fit: cover; object-position: center 55%; background: #000; }
   .tag {
     display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
     border-radius: 999px; padding: 4px 12px; background: var(--red-soft);
-    border: 1px solid var(--red); color: #ffc9c9; margin: 0 6px 6px 0; text-transform: uppercase;
+    border: 1px solid var(--orange); color: #ffc8a3; margin: 0 6px 6px 0; text-transform: uppercase;
   }
-  .tag.t-miks { border-color: #b06ee8; color: #e3c8ff; background: rgba(176,110,232,.14); }
-  .tag.t-filip { border-color: var(--gold); color: #ffe1a1; background: rgba(232,182,76,.12); }
-  .tag.t-wyw { border-color: #5aa9ff; color: #c4e1ff; background: rgba(90,169,255,.12); }
-  .tag.t-ekipa { border-color: #5fd08a; color: #c9f5da; background: rgba(95,208,138,.12); }
+  .tag.t-miks { border-color: var(--c-miks); color: #f2c0a6; background: rgba(210,129,91,.15); }
+  .tag.t-kogni { border-color: var(--c-kogni); color: #d5ddcc; background: rgba(162,174,152,.15); }
+  .tag.t-filip { border-color: var(--c-filip); color: #b3e0ea; background: rgba(90,162,179,.15); }
+  .tag.t-wyw { border-color: var(--c-rozmowy); color: #efd9cc; background: rgba(210,171,148,.15); }
+  .tag.t-ekipa { border-color: var(--cream); color: var(--cream); background: rgba(250,240,226,.08); }
   .tag.t-ig { border-color: #ff7ab8; color: #ffc7e2; background: rgba(255,122,184,.12); }
-  .tag.t-event { border-color: var(--gold); color: #ffe1a1; background: rgba(232,182,76,.12); }
-  .tag.t-mind { border-color: #4fd1c5; color: #c8fff8; background: rgba(79,209,197,.12); }
+  .tag.t-event { border-color: var(--orange); color: #ffc29a; background: rgba(255,117,31,.14); }
+  .tag.t-mind { border-color: var(--teal); color: #b0dbe6; background: rgba(84,147,163,.16); }
   .tag.t-odc { border-color: #fff; color: #fff; background: rgba(255,255,255,.1); }
   .date { color: var(--muted); font-size: 12px; letter-spacing: .5px; }
   .newsgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 16px; }
@@ -216,7 +249,7 @@
     transition: transform .2s ease, border-color .2s ease;
     display: flex; flex-direction: column;
   }
-  .ncard:hover { transform: translateY(-4px); border-color: var(--red); }
+  .ncard:hover { transform: translateY(-4px); border-color: var(--teal); }
   .ncard h2, .ncard h3 { margin: 8px 0; font-size: 18px; line-height: 1.35; }
   .ncard p { margin: 0 0 14px; font-size: 13.5px; line-height: 1.65; color: var(--cream); opacity: .9; white-space: pre-wrap; flex: 1; }
   .ncard .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -226,7 +259,7 @@
     text-decoration: none; color: inherit; display: block;
     transition: transform .2s ease, border-color .2s ease;
   }
-  .video:hover { border-color: var(--red); transform: translateY(-4px); }
+  .video:hover { border-color: var(--teal); transform: translateY(-4px); }
   .video img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; object-position: center; display: block; background: #000; }
   .video .in { padding: 12px 14px 16px; }
   .video h3 { margin: 0 0 4px; font-size: 14px; line-height: 1.4; }
@@ -237,11 +270,16 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
     transition: transform .2s ease, border-color .2s ease;
   }
-  .format:hover { transform: translateY(-5px); border-color: var(--red); }
+  .format:hover { transform: translateY(-5px); border-color: var(--fc, var(--teal)); }
   .format { cursor: pointer; }
+  .format { border-top: 3px solid var(--fc, var(--teal)); }
+  .format[data-fmt="0"] { --fc: var(--c-kogni); } .format[data-fmt="1"] { --fc: var(--c-miks); }
+  .format[data-fmt="2"] { --fc: var(--c-filip); } .format[data-fmt="3"] { --fc: var(--c-rozmowy); }
+  .format[data-fmt="4"] { --fc: var(--orange); } .format[data-fmt="5"] { --fc: var(--teal); }
+  .format h2 { color: color-mix(in srgb, var(--fc, var(--teal)) 70%, #fff); }
   .format .ph { height: 190px; background-size: cover; background-position: center; }
   .format .in { padding: 16px 18px 20px; }
-  .format h2, .format h3 { margin: 0 0 6px; font-size: 18px; font-family: Georgia, serif; font-weight: 400; }
+  .format h2, .format h3 { margin: 0 0 6px; font-size: 18px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .format p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
   .player { margin-top: 16px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #000; }
   .player iframe { display: block; width: 100%; border: 0; }
@@ -255,7 +293,7 @@
   }
   .spot-card:hover { transform: translateY(-4px); border-color: #1db954; }
   .spot-card img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 1px solid #1db954; background: #000; }
-  .spot-card h3 { margin: 6px 0 0; font-size: 19px; font-family: Georgia, serif; font-weight: 400; }
+  .spot-card h3 { margin: 6px 0 0; font-size: 19px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .spot-card p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.55; }
   .spot-card .go {
     margin-top: 6px; background: #1db954; color: #06130b; font-weight: 800;
@@ -282,19 +320,19 @@
   }
   .card:hover { transform: translateY(-4px); border-color: rgba(250,240,226,.45); }
   .card.deputy-star {
-    border: 2px solid var(--gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 22px rgba(232,182,76,.20);
+    border: 2px solid var(--teal);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 22px rgba(84,147,163,.22);
   }
-  .card.deputy-star:hover { transform: translateY(-4px); border-color: #ffe1a1; }
-  .card.deputy-star .avatar { border-color: var(--gold); }
+  .card.deputy-star:hover { transform: translateY(-4px); border-color: var(--teal-light); }
+  .card.deputy-star .avatar { border-color: var(--teal); }
   .avatar {
     width: 104px; height: 104px; border-radius: 50%; object-fit: cover;
-    border: 3px solid var(--cream); background: #3d0a4e; display: block; margin: 0 auto;
+    border: 3px solid var(--cream); background: #173b45; display: block; margin: 0 auto;
   }
   .avatar.initials {
     display: flex; align-items: center; justify-content: center;
     font-size: 32px; font-weight: 800; color: #fff;
-    background: linear-gradient(135deg, #7a1010, #d32f2f);
+    background: linear-gradient(135deg, #2c6574, #5493a3);
   }
   .card h3 { margin: 12px 0 2px; font-size: 16px; }
   .card .role { color: var(--muted); font-size: 13px; margin-bottom: 10px; min-height: 18px; }
@@ -319,7 +357,7 @@
   .ig-card .cap b { color: var(--cream); }
   .ig-follow {
     display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
-    background: linear-gradient(120deg, rgba(211,47,47,.22), rgba(176,110,232,.18));
+    background: linear-gradient(120deg, rgba(255,117,31,.18), rgba(84,147,163,.22));
     border: 1px solid var(--line); border-radius: 20px; padding: 22px 26px; margin-top: 16px;
   }
   .ig-follow .ava {
@@ -335,8 +373,8 @@
     padding: 24px 18px; text-decoration: none; color: inherit; display: block; text-align: center;
     transition: transform .2s ease, border-color .2s ease;
   }
-  .contact-cards a.cc:hover { border-color: var(--red); transform: translateY(-4px); }
-  .contact-cards .ico { display: flex; justify-content: center; color: var(--gold); }
+  .contact-cards a.cc:hover { border-color: var(--teal); transform: translateY(-4px); }
+  .contact-cards .ico { display: flex; justify-content: center; color: var(--teal-light); }
   .contact-cards .ico svg { width: 32px; height: 32px; display: block; }
   .contact-cards h2, .contact-cards h3 { margin: 10px 0 4px; font-size: 17px; }
   .contact-cards p { margin: 0; font-size: 13px; color: var(--muted); }
@@ -347,22 +385,22 @@
   /* ---------- hierarchia ekipy ---------- */
   .lead-solo {
     display: flex; gap: 26px; align-items: center; flex-wrap: wrap;
-    background: linear-gradient(120deg, rgba(232,182,76,.14), var(--card));
-    border: 2px solid var(--gold); border-radius: 22px; padding: 28px 30px; margin-top: 16px;
-    box-shadow: 0 12px 36px rgba(0,0,0,.35), 0 0 28px rgba(232,182,76,.18);
+    background: linear-gradient(120deg, rgba(255,117,31,.12), var(--card));
+    border: 2px solid var(--orange); border-radius: 22px; padding: 28px 30px; margin-top: 16px;
+    box-shadow: 0 12px 36px rgba(0,0,0,.35), 0 0 28px rgba(255,117,31,.16);
   }
   .lead-solo img.biglead {
     width: 190px; height: 190px; border-radius: 50%; object-fit: cover; flex: none;
-    border: 4px solid var(--gold); background: #3d0a4e;
+    border: 4px solid var(--orange); background: #173b45;
   }
   .lead-solo .who { flex: 1 1 260px; }
-  .lead-solo .who h3 { margin: 6px 0 2px; font-size: 30px; font-family: Georgia, serif; font-weight: 400; }
+  .lead-solo .who h3 { margin: 6px 0 2px; font-size: 30px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .lead-solo .who .role { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
   .lead-solo .who p.bio { font-size: 14px; line-height: 1.65; opacity: .92; margin: 0; white-space: pre-wrap; }
   .chief-badge {
     display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2px;
-    border-radius: 999px; padding: 5px 14px; color: #2a1500;
-    background: var(--gold); border: 1px solid var(--gold);
+    border-radius: 999px; padding: 5px 14px; color: var(--on-orange);
+    background: var(--orange); border: 1px solid var(--orange);
   }
   .lead-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
   .lead-row .card .avatar { width: 150px; height: 150px; }
@@ -377,37 +415,40 @@
     padding: 26px 22px; text-decoration: none; color: inherit; display: block; text-align: center;
     transition: transform .2s ease, border-color .2s ease;
   }
-  .plat-card:hover { transform: translateY(-4px); border-color: var(--red); }
-  .plat-card .ico { display: flex; justify-content: center; color: var(--gold); }
+  .plat-card:hover { transform: translateY(-4px); border-color: var(--teal); }
+  .plat-card .ico { display: flex; justify-content: center; color: var(--teal-light); }
   .plat-card .ico svg { width: 42px; height: 42px; display: block; }
-  .plat-card h2, .plat-card h3 { margin: 10px 0 6px; font-size: 19px; font-family: Georgia, serif; font-weight: 400; }
+  .plat-card h2, .plat-card h3 { margin: 10px 0 6px; font-size: 19px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .plat-card p { margin: 0 0 14px; font-size: 13px; color: var(--muted); line-height: 1.6; }
   /* ---------- about ---------- */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
   .about-card {
     background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px;
   }
-  .about-card::before { content: ""; display: block; width: 36px; height: 3px; border-radius: 2px; background: var(--gold); margin-bottom: 14px; opacity: .9; }
-  .about-card h2, .about-card h3 { margin: 0 0 10px; font-size: 20px; font-family: Georgia, serif; font-weight: 400; }
+  .about-card::before { content: ""; display: block; width: 36px; height: 3px; border-radius: 2px; background: var(--orange); margin-bottom: 14px; opacity: .9; }
+  .about-card h2, .about-card h3 { margin: 0 0 10px; font-size: 20px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .about-card p, .about-card li { font-size: 14px; line-height: 1.7; color: var(--cream); opacity: .92; }
   .about-card ul { margin: 0; padding-left: 20px; }
   .cta-band {
     margin-top: 20px; padding: 30px; border-radius: 22px; text-align: center;
-    background: linear-gradient(120deg, rgba(211,47,47,.22), rgba(176,110,232,.18));
+    background: linear-gradient(120deg, rgba(255,117,31,.18), rgba(84,147,163,.22));
     border: 1px solid var(--line);
   }
-  .cta-band h3 { margin: 0 0 8px; font-size: 24px; font-family: Georgia, serif; font-weight: 400; }
+  .cta-band h3 { margin: 0 0 8px; font-size: 24px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; }
   .cta-band p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
     footer.site {
     margin-top: 70px; border-top: 1px solid var(--line);
-    background: rgba(10, 2, 18, 0.55);
+    background: rgba(5, 14, 18, 0.6);
     color: var(--muted); font-size: 13px; text-align: left;
   }
   footer.site .foot-grid {
     display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px;
     max-width: 1080px; margin: 0 auto; padding: 36px 22px 8px;
   }
-  footer.site .foot-title { margin: 0 0 10px; font-family: Georgia, serif; font-weight: 400; font-size: 24px; color: var(--cream); }
+  footer.site .foot-title { margin: 0 0 12px; display: flex; align-items: center; gap: 12px; font-size: 24px; color: var(--cream); }
+  footer.site .foot-title img { width: 56px; height: 56px; border-radius: 50%; background: var(--cream); border: 2px solid var(--cream); }
+  footer.site .foot-title small { display: block; font-size: 14px; font-weight: 500; }
+  footer.site .foot-title b { font-weight: 800; font-style: italic; color: var(--teal-light); }
   footer.site h2 { margin: 0 0 10px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--cream); opacity: .85; }
   footer.site p { margin: 0; line-height: 1.6; max-width: 340px; }
   footer.site .foot-nav a, footer.site .foot-contact a { display: block; color: var(--muted); text-decoration: none; padding: 6px 0; }
@@ -429,20 +470,20 @@
   }
   /* ---------- modale ---------- */
   .modal-back {
-    position: fixed; inset: 0; background: rgba(10, 1, 16, 0.7);
+    position: fixed; inset: 0; background: rgba(4, 12, 15, 0.75);
     display: flex; align-items: center; justify-content: center; padding: 18px; z-index: 50;
   }
   .modal-back[hidden] { display: none; }
   .modal {
-    background: #241031; border: 1px solid var(--line); border-radius: 20px;
+    background: #10272f; border: 1px solid var(--line); border-radius: 20px;
     max-width: 560px; width: 100%; max-height: 90vh; overflow: auto; padding: 26px;
   }
   .modal.detail { text-align: center; }
   .modal.detail img.big {
     width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
-    border: 4px solid var(--cream); background: #3d0a4e;
+    border: 4px solid var(--cream); background: #173b45;
   }
-  .modal.detail h2 { margin: 12px 0 2px; font-family: Georgia, serif; font-weight: 400; font-size: 30px; }
+  .modal.detail h2 { margin: 12px 0 2px; font-family: var(--fh); font-weight: 750; letter-spacing: -0.01em; font-size: 30px; }
   .modal.detail .role { color: var(--muted); margin-bottom: 12px; }
   .modal.detail .bio {
     text-align: left; background: rgba(255, 255, 255, 0.06); border-radius: 12px;
@@ -456,7 +497,7 @@
   .plat-lab { font-size: 13px; color: var(--muted); margin-right: 4px; }
   .confirm-box {
     margin-top: 14px; border: 1px solid var(--red); border-radius: 12px;
-    background: rgba(211, 47, 47, 0.1); padding: 14px;
+    background: rgba(255, 117, 31, 0.1); padding: 14px;
   }
   form.f label { display: block; font-size: 13px; color: var(--muted); margin: 14px 0 6px; }
   form.f input, form.f select, form.f textarea {
@@ -468,11 +509,11 @@
   form.f textarea { min-height: 90px; resize: vertical; }
   form.f input[type="file"] { padding: 8px; }
   .photo-preview { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
-  .photo-preview img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); background: #3d0a4e; }
+  .photo-preview img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); background: #173b45; }
   .photo-preview small { color: var(--muted); }
   #formErr { color: #ff9d9d; font-size: 13px; margin-top: 10px; }
   #netBanner {
-    background: rgba(211,47,47,.14); border: 1px solid var(--red); border-radius: 12px;
+    background: rgba(255,117,31,.14); border: 1px solid var(--red); border-radius: 12px;
     padding: 10px 14px; font-size: 13px; display: flex; gap: 10px;
     align-items: center; justify-content: center; margin: 14px 0;
   }
@@ -490,10 +531,12 @@
     .hero { min-height: 340px; flex-wrap: wrap; }
     .hero .cap { padding: 22px; }
     .hero .cap h1 { font-size: 28px; }
+    .hero-logo { width: 84px; height: 84px; }
     .hero-side { padding: 0 22px 22px; margin: 0 auto; }
     .hero-vinyl { width: 168px; height: 168px; }
     .hp-note { max-width: 100%; }
-    .mast-brand b { font-size: 17px; }
+    .mast-brand b { font-size: 20px; }
+    .mast-brand img { width: 44px; height: 44px; }
     .sec-head h1, .sec-head h2 { font-size: 25px; }
     .sec-head h2.sub { font-size: 21px; }
     .ig-card iframe { height: 440px; }
@@ -554,7 +597,7 @@
   }
   /* Tekst hero czytelny na telefonie — mocniejsze przyciemnienie pod napisem */
   @media (max-width: 760px) {
-    .hero .shade { background: linear-gradient(180deg, rgba(20,2,30,.55) 0%, rgba(20,2,30,.92) 55%, rgba(20,2,30,.96) 100%); }
+    .hero .shade { background: linear-gradient(180deg, rgba(8,20,25,.55) 0%, rgba(8,20,25,.92) 55%, rgba(8,20,25,.96) 100%); }
   }
   /* Okno modalne */
   body.modal-open { overflow: hidden; }
@@ -568,6 +611,32 @@
     .rv { opacity: 1; transform: none; }
     .ticker .lane { animation: none; }
   }
+
+  /* ---------- kontakt: lista + mapa ---------- */
+  .contact-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 16px; margin-top: 16px; align-items: stretch; }
+  .contact-list { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 8px; display: flex; flex-direction: column; }
+  .cl-item { display: flex; gap: 16px; align-items: flex-start; padding: 16px 18px; border-radius: 14px; text-decoration: none; color: inherit; transition: background .2s ease; }
+  .cl-item + .cl-item { border-top: 1px solid var(--line); border-top-left-radius: 0; border-top-right-radius: 0; }
+  a.cl-item:hover { background: rgba(255,255,255,.06); }
+  a.cl-item:hover .cl-val { text-decoration: underline; }
+  .cl-ico { flex: none; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--teal-light); background: rgba(84,147,163,.16); border: 1px solid rgba(84,147,163,.45); }
+  .cl-ico svg { width: 22px; height: 22px; }
+  .cl-txt { display: flex; flex-direction: column; font-style: normal; font-size: 14px; line-height: 1.55; color: var(--cream); min-width: 0; }
+  .cl-lab { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+  .cl-val { font-size: 17px; font-weight: 700; overflow-wrap: anywhere; }
+  .cl-note { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .map-card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+  .map-frame { display: block; width: 100%; flex: 1 1 auto; min-height: 340px; border: 0; background: #10272f; filter: saturate(.9); }
+  .map-btns { display: flex; gap: 10px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--line); }
+  @media (max-width: 860px) {
+    .contact-wrap { grid-template-columns: 1fr; }
+    .map-frame { min-height: 300px; }
+  }
+  @media (max-width: 480px) {
+    .cl-item { gap: 12px; padding: 14px 10px; }
+    .cl-ico { width: 40px; height: 40px; }
+    .cl-val { font-size: 15px; }
+  }
 </style>
 </head>
 <body>
@@ -577,7 +646,7 @@
 <a class="skip-link" href="#tresc">Przejdź do treści</a>
 <header class="masthead">
   <div class="mast-in">
-    <a class="mast-brand" href="#/start"><img id="logoImg" src="logo.webp" width="38" height="38" alt="Myśloteka — strona główna"><span><b>Myśloteka</b><small>REDAKCJA PODCASTU</small></span></a>
+    <a class="mast-brand" href="#/start"><img id="logoImg" src="logo.webp" width="50" height="50" alt=""><span class="wm"><small>Podcast </small><b>Myśloteka</b><span class="sr-only"> — strona główna</span></span></a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="secNav"><span class="bars" aria-hidden="true"></span>Menu</button>
     <nav class="sections" id="secNav" aria-label="Menu główne">
       <a href="#/start" data-route="start">Strona główna</a>
@@ -606,8 +675,8 @@
       <img class="bg" id="heroImg" src="hero.webp" alt="">
       <div class="shade"></div>
       <div class="cap">
-        <span class="kicker">Studencki podcast • UMK Toruń</span>
-        <h1>Gadamy o mózgu, żebyś nie musiał czytać podręczników.</h1>
+        <div class="hero-brand"><img class="hero-logo" src="logo.webp" width="112" height="112" alt="Logo podcastu Myśloteka"><span class="kicker">Studencki podcast • UMK Toruń</span></div>
+        <h1>Gadamy o <em>mózgu</em>, żebyś nie musiał czytać podręczników.</h1>
         <p>Redakcja Myśloteki — Koło Kognitywistyczne (TKK): neuronauka, psychologia, technologia i przyszłość. Na luzie, ale z głową. Nowe odcinki co poniedziałek.</p>
         <div class="cta">
           <a class="btn" href="https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo" target="_blank" rel="noopener">Słuchaj na Spotify</a>
@@ -756,24 +825,34 @@
   <!-- KONTAKT -->
   <div class="page" id="page-kontakt">
   <section class="block" id="kontakt">
-    <div class="sec-head rv"><h1>Kontakt</h1><p>Znajdziesz nas wszędzie tam, gdzie słucha się podcastów — i nie tylko.</p></div>
+    <div class="sec-head rv"><h1>Kontakt</h1><p>Masz temat na odcinek, chcesz nas zaprosić albo nagrać z nami rozmowę? Napisz, zadzwoń albo wpadnij.</p></div>
     <div class="rule rv"></div>
-    <div class="contact-cards">
-      <a class="cc rv" href="https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo" target="_blank" rel="noopener">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.4 5.6a9 9 0 0 1 0 12.8"/></svg></div><h2>Spotify</h2><p>Wszystkie odcinki audio</p>
-      </a>
-      <a class="cc rv d1" href="https://www.youtube.com/@Mysloteka_TKK" target="_blank" rel="noopener">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M10.5 9.8v4.4l4-2.2z" fill="currentColor" stroke="none"/></svg></div><h2>YouTube</h2><p>Odcinki wideo i shorty</p>
-      </a>
-      <a class="cc rv d2" href="https://www.instagram.com/mysloteka_podcast/" target="_blank" rel="noopener">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13" r="3.6"/><circle cx="17.2" cy="10.2" r="1.1" fill="currentColor" stroke="none"/></svg></div><h2>Instagram</h2><p>Rolki i kulisy nagrań</p>
-      </a>
-      <a class="cc rv d3" href="mailto:podcast.mysloteka@gmail.com">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div><h2>E-mail</h2><p>podcast.mysloteka@gmail.com</p>
-      </a>
-      <a class="cc rv d3" href="tel:+48500813724">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l1.5 4.5L8 10.5a12 12 0 0 0 5.5 5.5l2-2.5L20 15v4a1.5 1.5 0 0 1-1.7 1.5C10.5 20 4 13.5 3.5 5.7A1.5 1.5 0 0 1 5 4z"/></svg></div><h2>Telefon</h2><p>500 813 724</p>
-      </a>
+    <div class="contact-wrap">
+      <div class="contact-list rv">
+        <a class="cl-item" href="mailto:podcast.mysloteka@gmail.com">
+          <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <span class="cl-txt"><span class="cl-lab">E-mail</span><span class="cl-val">podcast.mysloteka@gmail.com</span><span class="cl-note">Najlepiej w sprawie współpracy, gości i tematów</span></span>
+        </a>
+        <a class="cl-item" href="tel:+48500813724">
+          <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l1.5 4.5L8 10.5a12 12 0 0 0 5.5 5.5l2-2.5L20 15v4a1.5 1.5 0 0 1-1.7 1.5C10.5 20 4 13.5 3.5 5.7A1.5 1.5 0 0 1 5 4z"/></svg></span>
+          <span class="cl-txt"><span class="cl-lab">Telefon</span><span class="cl-val">500 813 724</span><span class="cl-note">Zadzwoń albo napisz SMS-a</span></span>
+        </a>
+        <a class="cl-item" href="https://ig.me/m/mysloteka_podcast" target="_blank" rel="noopener">
+          <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <span class="cl-txt"><span class="cl-lab">Instagram</span><span class="cl-val">@mysloteka_podcast</span><span class="cl-note">Wiadomość prywatna — odpisujemy</span></span>
+        </a>
+        <div class="cl-item cl-addr">
+          <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span>
+          <address class="cl-txt"><span class="cl-lab">Gdzie nas spotkasz</span><span class="cl-val">Instytut Psychologii UMK</span>ul. Gagarina 39<br>87-100 Toruń<span class="cl-note">Tu działa Katedra Kognitywistyki i nasze koło</span></address>
+        </div>
+      </div>
+      <div class="map-card rv d1">
+        <iframe class="map-frame" src="https://www.google.com/maps?q=Instytut+Psychologii+UMK%2C+Gagarina+39%2C+87-100+Toru%C5%84&z=16&hl=pl&output=embed" title="Mapa: Instytut Psychologii UMK, ul. Gagarina 39, Toruń" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-btns">
+          <a class="btn sm" href="https://www.google.com/maps/dir/?api=1&destination=Instytut+Psychologii+UMK%2C+Gagarina+39%2C+87-100+Toru%C5%84" target="_blank" rel="noopener">Wyznacz trasę</a>
+          <a class="btn sm ghost" href="https://www.google.com/maps/search/?api=1&query=Instytut+Psychologii+UMK%2C+Gagarina+39%2C+87-100+Toru%C5%84" target="_blank" rel="noopener">Otwórz w Mapach Google</a>
+        </div>
+      </div>
     </div>
   </section>
   </div>
@@ -783,7 +862,7 @@
   <footer class="site">
     <div class="foot-grid">
       <div class="foot-brand">
-        <p class="foot-title">Myśloteka</p>
+        <p class="foot-title"><img src="logo.webp" width="56" height="56" alt=""><span><small>Podcast</small> <b>Myśloteka</b></span></p>
         <p>Studencki podcast Koła Kognitywistycznego, UMK Toruń. Nowe odcinki co poniedziałek — na Spotify, YouTube i Instagramie.</p>
       </div>
       <nav class="foot-nav" aria-label="Mapa strony">
@@ -799,6 +878,7 @@
       <div class="foot-contact">
         <h2>Kontakt</h2>
         <a href="mailto:podcast.mysloteka@gmail.com">podcast.mysloteka@gmail.com</a>
+        <a href="tel:+48500813724">Tel. 500 813 724</a>
         <a href="https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo" target="_blank" rel="noopener">Spotify</a>
         <a href="https://www.youtube.com/@Mysloteka_TKK" target="_blank" rel="noopener">YouTube</a>
         <a href="https://www.instagram.com/mysloteka_podcast/" target="_blank" rel="noopener">Instagram</a>
@@ -1155,7 +1235,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
       '<a class="btn" href="' + esc(SPOTIFY_SHOW) + '" target="_blank" rel="noopener">Spotify</a>' +
       '<a class="btn ghost" href="' + esc(YT_CHANNEL) + '" target="_blank" rel="noopener">YouTube</a>' +
       '<button type="button" class="btn ghost" id="dClose">Zamknij</button></div>' +
-      '<h3 style="font-family:Georgia,serif;font-weight:400;margin:20px 0 10px;text-align:left;">Odcinki tego formatu (' + list.length + ')</h3>' +
+      '<h3 style="font-family:var(--fh);font-weight:750;margin:20px 0 10px;text-align:left;">Odcinki tego formatu (' + list.length + ')</h3>' +
       '<div id="fmtEps" style="text-align:left;"></div>';
     fillFormatEps(f.t);
     showDialog(opener);
@@ -1258,6 +1338,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
   function tagClass(tag) {
     tag = String(tag || "");
     if (tag === "MiksTalk") return "t-miks";
+    if (tag === "KogniNews") return "t-kogni";
     if (tag === "Filip i Świat Jutra") return "t-filip";
     if (tag === "Wywiady") return "t-wyw";
     if (tag === "Ekipa") return "t-ekipa";
@@ -1273,10 +1354,27 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     return "Czytaj / słuchaj";
   }
 
+  function ytIdFromLink(link) {
+    var m = String(link || "").match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : null;
+  }
+  /* Zdjęcie wpisu: własne "img", a jak go nie ma — miniaturka filmu z YouTube z pola "link". */
+  function newsImg(n) {
+    if (n.img) return { src: n.img, alt: n.imgAlt || "" };
+    var id = ytIdFromLink(n.link);
+    return id ? { src: "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg", alt: "", yt: true } : null;
+  }
+
   function newsCard(n, i, hl) {
     hl = hl || "h2";
     return '<div class="ncard rv d' + (i % 4) + '">' +
-      (n.img ? '<img class="nimg" src="' + esc(n.img) + '" alt="' + esc(n.imgAlt || "") + '" loading="lazy" width="785" height="441">' : "") +
+      (function () {
+        var im = newsImg(n);
+        if (!im) return "";
+        var tag = '<img class="nimg" src="' + esc(im.src) + '" alt="' + esc(im.alt) + '" loading="lazy" width="785" height="441" onerror="this.closest(\'.nimg-wrap\') ? this.closest(\'.nimg-wrap\').remove() : this.remove()">';
+        /* miniaturka filmu jest też klikalna (duplikat linku — ukryty przed czytnikiem i klawiaturą) */
+        return n.link ? '<a class="nimg-wrap" href="' + esc(n.link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + tag + "</a>" : tag;
+      })() +
       '<div><span class="tag ' + tagClass(n.tag) + '">' + esc(n.tag || "Redakcja") + '</span> ' +
       '<span class="date">' + esc(fmtDate(n.date)) + "</span></div>" +
       "<" + hl + ">" + esc(n.title) + "</" + hl + ">" +
@@ -1299,7 +1397,8 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     for (var k = 0; k < FORMATS.length; k++) {
       if (first.tag && first.tag === FORMATS[k].t) { featImg = FORMATS[k].img; break; }
     }
-    if (first.img) { featImg = first.img; featAlt = first.imgAlt || ""; }
+    var fim = newsImg(first);
+    if (fim) { featImg = fim.src; featAlt = fim.alt; }
     featBox.innerHTML =
       '<div class="feat rv"><div class="txt">' +
       '<div><span class="tag ' + tagClass(first.tag) + '">' + esc(first.tag || "Redakcja") + '</span> ' +
@@ -1326,7 +1425,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
   function igCard(postId, cap) {
     return '<div class="ig-card rv"><iframe src="https://www.instagram.com/reel/' + esc(postId) + '/embed/" ' +
       'loading="lazy" title="Post na Instagramie: ' + esc(cap || postId) + '" allowtransparency="true" scrolling="no"></iframe>' +
-      '<div class="cap"><b>@mysloteka_podcast</b> — ' + esc(cap || "Zobacz na Instagramie") + ' <a href="https://www.instagram.com/reel/' + esc(postId) + '/" target="_blank" rel="noopener" style="color:#ff8a8a;">Otwórz post →</a></div></div>';
+      '<div class="cap"><b>@mysloteka_podcast</b> — ' + esc(cap || "Zobacz na Instagramie") + ' <a href="https://www.instagram.com/reel/' + esc(postId) + '/" target="_blank" rel="noopener" style="color:#ffa366;">Otwórz post →</a></div></div>';
   }
 
   function renderIG() {
@@ -1407,7 +1506,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     var badge = /naczelna/i.test(p.role || "") ? "REDAKTOR NACZELNA" : "REDAKTOR NACZELNY";
     var img;
     if (ph.t === 1 && ph.u) img = '<img class="biglead" src="' + esc(ph.u) + '" alt="" data-nm="' + esc(p.name) + '" width="190" height="190" loading="eager" style="object-position:' + esc(photoPosOf(p)) + ';" onerror="window.__imgFb(this)">';
-    else img = '<span class="biglead" aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:190px;height:190px;flex:none;font-size:54px;font-weight:800;color:#fff;background:linear-gradient(135deg,#7a1010,#d32f2f);border:4px solid var(--gold);border-radius:50%;">' + esc(initials(p.name)) + "</span>";
+    else img = '<span class="biglead" aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:190px;height:190px;flex:none;font-size:54px;font-weight:800;color:#fff;background:linear-gradient(135deg,#2c6574,#5493a3);border:4px solid var(--orange);border-radius:50%;">' + esc(initials(p.name)) + "</span>";
     return '<div class="lead-solo rv"><div>' + img + '</div><div class="who">' +
       '<span class="chief-badge">' + badge + '</span>' +
       "<h3>" + esc(p.name) + "</h3>" +
@@ -1488,7 +1587,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     if (!p) return;
     var m = document.getElementById("detailModal");
     var ph = p.photo || { t: 0 };
-    var bigInitials = '<div class="big initials" aria-hidden="true" style="width:150px;height:150px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#fff;background:linear-gradient(135deg,#7a1010,#d32f2f);border:4px solid var(--cream);">' + esc(initials(p.name)) + "</div>";
+    var bigInitials = '<div class="big initials" aria-hidden="true" style="width:150px;height:150px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#fff;background:linear-gradient(135deg,#2c6574,#5493a3);border:4px solid var(--cream);">' + esc(initials(p.name)) + "</div>";
     var bigPhoto = (ph.t === 1 && ph.u)
       ? '<img class="big" src="' + esc(ph.u) + '" alt="" width="150" height="150" data-nm="' + esc(p.name) + '" data-cls="big" style="object-position:' + esc(photoPosOf(p)) + ';" onerror="window.__imgFb(this)">'
       : bigInitials;
