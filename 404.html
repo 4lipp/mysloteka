@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nie ma takiej strony — Myśloteka</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16041f">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif; color: #faf0e2; padding: 24px;
+    background:
+      radial-gradient(900px 600px at 85% -10%, rgba(211,47,47,.16), rgba(211,47,47,0) 60%),
+      radial-gradient(800px 600px at -10% 110%, rgba(150,60,190,.3), rgba(150,60,190,0) 60%),
+      linear-gradient(112deg, #16041f 0%, #23052e 50%, #360a46 100%);
+  }
+  main { max-width: 560px; text-align: center; }
+  img { width: 180px; height: 180px; border-radius: 50%; box-shadow: 0 0 80px rgba(211,47,47,.3); }
+  .code { margin: 22px 0 0; font-size: 13px; font-weight: 800; letter-spacing: 3px; color: #ffb3b3; }
+  h1 { font-family: Georgia, serif; font-weight: 400; font-size: 36px; margin: 8px 0 12px; line-height: 1.15; }
+  p { color: #c9b8d0; font-size: 16px; line-height: 1.65; margin: 0 0 24px; }
+  .row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  a.btn {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 12px;
+    font-weight: 700; font-size: 15px; color: #fff; background: #d32f2f; text-decoration: none;
+  }
+  a.btn.ghost { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.14); font-weight: 400; }
+  a.btn:hover { filter: brightness(1.12); }
+  :focus-visible { outline: 3px solid #ffd36e; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/winyl.webp" alt="">
+  <p class="code">BŁĄD 404</p>
+  <h1>Ten neuron nie odpowiada.</h1>
+  <p>Strony, której szukasz, nie ma albo zmieniła adres. Wróć na start albo posłuchaj najnowszego odcinka.</p>
+  <div class="row">
+    <a class="btn" href="/">Strona główna</a>
+    <a class="btn ghost" href="/#/odcinki">Odcinki</a>
+  </div>
+</main>
+</body>
+</html>
