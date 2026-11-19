@@ -81,6 +81,8 @@
   }
   .btn:hover { filter: brightness(1.12); }
   .btn.ghost { background: rgba(255, 255, 255, 0.1); border: 1px solid var(--line); font-weight: 400; }
+  .btn.yt { background: #faf0e2; color: #1a0624; display: inline-flex; align-items: center; gap: 8px; }
+  .btn.yt svg { width: 22px; height: 22px; flex: none; }
   .btn.danger { background: #7a1010; }
   .btn.sm { padding: 6px 14px; font-size: 12px; }
   /* ---------- pasek „na antenie” ---------- */
@@ -190,7 +192,10 @@
   .feat .txt { padding: 28px 30px; }
   .feat .txt h2, .feat .txt h3 { font-family: Georgia, serif; font-weight: 400; font-size: 27px; margin: 8px 0 10px; line-height: 1.2; }
   .feat .txt p { font-size: 14px; line-height: 1.7; color: var(--cream); opacity: .92; margin: 0 0 16px; white-space: pre-wrap; }
-  .feat .img { min-height: 260px; background-size: cover; background-position: center; }
+  .feat .img { min-height: 260px; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
+  .ncard { overflow: hidden; }
+  #miniNews .ncard p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: 1 0 auto; }
+  .ncard .nimg { display: block; width: calc(100% + 44px); height: auto; max-width: none; margin: -20px -22px 14px; aspect-ratio: 16/9; object-fit: cover; object-position: center 55%; background: #000; }
   .tag {
     display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
     border-radius: 999px; padding: 4px 12px; background: var(--red-soft);
@@ -199,7 +204,7 @@
   .tag.t-miks { border-color: #b06ee8; color: #e3c8ff; background: rgba(176,110,232,.14); }
   .tag.t-filip { border-color: var(--gold); color: #ffe1a1; background: rgba(232,182,76,.12); }
   .tag.t-wyw { border-color: #5aa9ff; color: #c4e1ff; background: rgba(90,169,255,.12); }
-  .tag.t-nabor { border-color: #5fd08a; color: #c9f5da; background: rgba(95,208,138,.12); }
+  .tag.t-ekipa { border-color: #5fd08a; color: #c9f5da; background: rgba(95,208,138,.12); }
   .tag.t-ig { border-color: #ff7ab8; color: #ffc7e2; background: rgba(255,122,184,.12); }
   .tag.t-event { border-color: var(--gold); color: #ffe1a1; background: rgba(232,182,76,.12); }
   .tag.t-mind { border-color: #4fd1c5; color: #c8fff8; background: rgba(79,209,197,.12); }
@@ -222,7 +227,7 @@
     transition: transform .2s ease, border-color .2s ease;
   }
   .video:hover { border-color: var(--red); transform: translateY(-4px); }
-  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #000; }
+  .video img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; object-position: center; display: block; background: #000; }
   .video .in { padding: 12px 14px 16px; }
   .video h3 { margin: 0 0 4px; font-size: 14px; line-height: 1.4; }
   .video small { color: var(--muted); font-size: 12px; }
@@ -606,6 +611,7 @@
         <p>Redakcja Myśloteki — Koło Kognitywistyczne (TKK): neuronauka, psychologia, technologia i przyszłość. Na luzie, ale z głową. Nowe odcinki co poniedziałek.</p>
         <div class="cta">
           <a class="btn" href="https://open.spotify.com/show/3uTM4qCO8ZjoW8y2ZvelFo" target="_blank" rel="noopener">Słuchaj na Spotify</a>
+          <a class="btn yt" href="https://www.youtube.com/@Mysloteka_TKK" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1.5" y="5" width="21" height="14" rx="4" fill="#ff0033"/><path d="M10 9v6l5.2-3z" fill="#fff"/></svg>Słuchaj na YouTube</a>
           <a class="btn ghost" href="#/aktualnosci">Co nowego w redakcji ↓</a>
         </div>
       </div>
@@ -642,7 +648,7 @@
     <div class="about-grid">
       <div class="about-card rv"><h2>Studencki podcast o mózgu</h2><p>Myśloteka to podcast Koła Kognitywistycznego (TKK) na UMK w Toruniu. Gadamy o neuronaukach, psychologii, technologii i przyszłości — na luzie, ale z głową. Bez podręcznikowego zadęcia, za to z gośćmi, badaniami i studenckimi historiami.</p></div>
       <div class="about-card rv d1"><h2>Co poniedziałek nowy odcinek</h2><p>Premiery co poniedziałek, na YouTube i Spotify. Sześć autorskich formatów: od przeglądu badań (KogniNews), przez rozmowy (MiksTalk, Wywiady), solowe narracje o przyszłości (Filip i Świat Jutra), po relacje z wydarzeń i studenckie mind-blowy.</p></div>
-      <div class="about-card rv d2"><h2>Ekipa, nie projekt</h2><p>Myśloteka to przede wszystkim ludzie — mówcy, montaż, social media. Cały skład poznasz w zakładce „Poznaj nas". Nabór mamy za sobą (zamknęliśmy go 18 listopada), ale zawsze możesz nas posłuchać i napisać.</p></div>
+      <div class="about-card rv d2"><h2>Ekipa, nie projekt</h2><p>Myśloteka to przede wszystkim ludzie — mówcy, montaż, social media. Cały skład poznasz w zakładce „Poznaj nas", a jak chcesz pogadać — napisz do nas.</p></div>
       <div class="about-card rv d3"><h2>Pogadajmy</h2><p>Masz temat na odcinek, chcesz nas zaprosić albo po prostu powiedzieć „siema"? Wpadnij w zakładkę Kontakt — odpisujemy.</p><p><a class="btn sm" href="#/kontakt">Kontakt →</a></p></div>
     </div>
   </section>
@@ -651,7 +657,7 @@
   <!-- AKTUALNOŚCI -->
   <div class="page" id="page-aktualnosci">
   <section class="block" id="aktualnosci">
-    <div class="sec-head rv"><h1>Aktualności redakcji</h1><p>Premiery odcinków, zapowiedzi, nabory i życie ekipy — prosto z redakcyjnego biurka.</p></div>
+    <div class="sec-head rv"><h1>Aktualności redakcji</h1><p>Premiery odcinków, zapowiedzi, wydarzenia i życie ekipy — prosto z redakcyjnego biurka.</p></div>
     <div class="rule rv"></div>
     <div id="featNews"></div>
     <div class="newsgrid" id="newsList"></div>
@@ -768,9 +774,6 @@
       <a class="cc rv d3" href="tel:+48500813724">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l1.5 4.5L8 10.5a12 12 0 0 0 5.5 5.5l2-2.5L20 15v4a1.5 1.5 0 0 1-1.7 1.5C10.5 20 4 13.5 3.5 5.7A1.5 1.5 0 0 1 5 4z"/></svg></div><h2>Telefon</h2><p>500 813 724</p>
       </a>
-      <a class="cc rv d3" href="https://forms.gle/VDhfky9EfZ3EhnzT9" target="_blank" rel="noopener">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8L19 8.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1z"/><path d="M14 3.5V8.5H19"/><path d="M8.5 13h7M8.5 16h5"/></svg></div><h2>Dołącz do ekipy</h2><p>Formularz zgłoszeniowy</p>
-      </a>
     </div>
   </section>
   </div>
@@ -821,16 +824,17 @@ window.SITE_PHOTOS = {"hero":"hero.webp","logo":"logo.webp","vinyl":"winyl.webp"
 /* ============================================================
    MYŚLOTEKA — TUTAJ EDYTUJESZ TREŚĆ (bez mojej pomocy!)
    - BAKED_NEWS: aktualności (najnowszy na górze listy).
+     Opcjonalnie "img":"plik.webp" + "imgAlt":"opis zdjęcia" — zdjęcie przy wpisie.
      Opcjonalne pole "until":"RRRR-MM-DD" — po tej dacie wpis sam znika
-     ze strony (np. nabór, zapisy na wydarzenie).
+     ze strony (np. zapisy na wydarzenie).
    - Zdjęcie osoby: wrzuć plik do ekipa- i wpisz "photo":{"t":1,"u":"ekipa-nazwa.webp"}
    - BAKED_PEOPLE: ekipa (imię, rola, ekipa, telefon, e-mail...)
    - BAKED_VIDS: zapasowa lista filmów (gdyby YouTube nie odpowiedział;
      na żywo filmy i tak pobierają się same przy każdym otwarciu)
    Po edycji wgraj na Netlify Drop wszystkie pliki (index.html, 404.html i obrazki).
    ============================================================ */
-window.BUILD_DATE = "2026-10-29";
-window.BAKED_NEWS = [{"id": "mikstalk-2026-11", "tag": "MiksTalk", "title": "Nowy MiksTalk: „Na co komu dziś” już jest", "text": "Najnowszy odcinek MiksTalka jest już na YouTube — premiera 16 listopada. Kliknij, żeby obejrzeć.", "link": "https://www.youtube.com/watch?v=xSWnNYdnacg", "date": "2026-11-16"}, {"id": "cyberpunk-2026-11", "tag": "Filip i Świat Jutra", "title": "Filip i Świat Jutra: CYBERPUNK — wszczepy, tożsamość, granica między mną a maszyną", "text": "Odcinek z 2 listopada już na YouTube — o wszczepach, tożsamości i granicy między człowiekiem a maszyną.", "link": "https://www.youtube.com/watch?v=FpaQGGYBC90", "date": "2026-11-02"}, {"id": "nabor-18", "tag": "Nabór", "title": "Nabór do ekipy tylko do 18 listopada!", "text": "Ostatnie dni, żeby dołączyć do Myśloteki — nabór zamykamy 18 listopada. Najbardziej szukamy montażystki lub montażysty, ale znajdzie się miejsce też dla prowadzących i osób od social mediów. Wypełnij formularz, zanim będzie za późno!", "link": "https://forms.gle/VDhfky9EfZ3EhnzT9", "date": "2026-10-29", "until": "2026-11-18"}, {"id": "kognitor-2026-10", "tag": "Wydarzenia specjalne", "title": "KOGNI-ToR: cała Polska w jednym mózgu", "text": "Wydarzenie z 26 października już na YouTube — relacja z KOGNI-ToRu.", "link": "https://www.youtube.com/watch?v=nKTeMrcj1gQ", "date": "2026-10-26"}, {"id": "mindblow-fw-2026-10", "tag": "Mindblow", "title": "Mindblow: praca Filipa Wiśniewskiego", "text": "Rozmowa o pracy Filipa Wiśniewskiego (premiera 19 października) już na YouTube.", "link": "https://www.youtube.com/watch?v=8oaEpUSj9og", "date": "2026-10-19"}, {"id": "mindblow-no-2026-10", "tag": "Mindblow", "title": "Mindblow: praca Natalii Olczak", "text": "Rozmowa o pracy Natalii Olczak (premiera 12 października) już na YouTube.", "link": "https://www.youtube.com/watch?v=CNosXM_RM98", "date": "2026-10-12"}];
+window.BUILD_DATE = "2026-11-19";
+window.BAKED_NEWS = [{"id": "spotkanie-ekipy-2026-11", "tag": "Ekipa", "title": "Nowa ekipa Myśloteki w komplecie — za nami pierwsze spotkanie", "text": "18 listopada pierwszy raz spotkaliśmy się w nowym, powiększonym składzie. Nowe twarze w montażu, prowadzeniu i social mediach, dużo poznawania się, planowania i integracji do późna. Rozeszliśmy się z głowami pełnymi pomysłów na kolejne odcinki i formaty — już niedługo usłyszycie, co z tego wyszło. Dzięki, że jesteście z nami!", "img": "aktualnosc-spotkanie-ekipy.webp", "imgAlt": "Ekipa Myśloteki przy wspólnym stole podczas spotkania integracyjnego", "date": "2026-11-18"}, {"id": "mikstalk-2026-11", "tag": "MiksTalk", "title": "Nowy MiksTalk: „Na co komu dziś” już jest", "text": "Najnowszy odcinek MiksTalka jest już na YouTube — premiera 16 listopada. Kliknij, żeby obejrzeć.", "link": "https://www.youtube.com/watch?v=xSWnNYdnacg", "date": "2026-11-16"}, {"id": "cyberpunk-2026-11", "tag": "Filip i Świat Jutra", "title": "Filip i Świat Jutra: CYBERPUNK — wszczepy, tożsamość, granica między mną a maszyną", "text": "Odcinek z 2 listopada już na YouTube — o wszczepach, tożsamości i granicy między człowiekiem a maszyną.", "link": "https://www.youtube.com/watch?v=FpaQGGYBC90", "date": "2026-11-02"}, {"id": "kognitor-2026-10", "tag": "Wydarzenia specjalne", "title": "KOGNI-ToR: cała Polska w jednym mózgu", "text": "Wydarzenie z 26 października już na YouTube — relacja z KOGNI-ToRu.", "link": "https://www.youtube.com/watch?v=nKTeMrcj1gQ", "date": "2026-10-26"}, {"id": "mindblow-fw-2026-10", "tag": "Mindblow", "title": "Mindblow: praca Filipa Wiśniewskiego", "text": "Rozmowa o pracy Filipa Wiśniewskiego (premiera 19 października) już na YouTube.", "link": "https://www.youtube.com/watch?v=8oaEpUSj9og", "date": "2026-10-19"}, {"id": "mindblow-no-2026-10", "tag": "Mindblow", "title": "Mindblow: praca Natalii Olczak", "text": "Rozmowa o pracy Natalii Olczak (premiera 12 października) już na YouTube.", "link": "https://www.youtube.com/watch?v=CNosXM_RM98", "date": "2026-10-12"}];
 window.BAKED_PEOPLE = [{"id": "seed-01", "name": "Filip Wiśniewski", "role": "Redaktor naczelny", "team": "Filip i Świat Jutra", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Głos formatu „Filip i Świat Jutra” — solowe narracje o przyszłości, transhumanizmie i technologii.", "photo": {"t": 1, "u": "ekipa-filip-wisniewski.webp"}, "createdAt": "2024-10-01"}, {"id": "seed-02", "name": "Karolina Dembicka", "role": "Zastępczyni redaktora naczelnego", "team": "KogniNews", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Współprowadzi KogniNews — przegląd badań i książek. Wcześniej montowała odcinki.", "photo": {"t": 1, "u": "ekipa-karolina-dembicka.webp"}, "createdAt": "2024-10-01"}, {"id": "seed-03", "name": "Magdalena Żelazna", "role": "Prowadząca", "team": "KogniNews", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Współprowadzi KogniNews — dba o to, żeby słuchacze wiedzieli, co w kognitywistyce piszczy.", "photo": {"t": 1, "u": "ekipa-magdalena-zelazna.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-04", "name": "Kamil Bagiński", "role": "Prowadzący wywiady", "team": "Wywiady", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Prowadzi rozmowy z gośćmi — mniej o wykładach, więcej o człowieku.", "photo": {"t": 1, "u": "ekipa-kamil-baginski.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-05", "name": "Martyna Michalska", "role": "Social Media", "team": "Social Media", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Ekipa social mediów — profile, posty i społeczność słuchaczy.", "photo": {"t": 1, "u": "ekipa-martyna-michalska.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-06", "name": "Marta Sołtan", "role": "Social Media", "team": "Social Media", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Ekipa social mediów — grafiki i krótkie materiały promocyjne.", "photo": {"t": 1, "u": "ekipa-marta-soltan.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-07", "name": "Maksymilian Płużycki", "role": "Prowadzący", "team": "MiksTalk", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Współprowadzi MiksTalk — rozmowy o psychologii i codzienności, na luzie.", "photo": {"t": 1, "u": "ekipa-maksymilian-pluzycki.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-08", "name": "Victoria Floder", "role": "Prowadząca", "team": "MiksTalk", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Współprowadzi MiksTalk — kognitywistyczne spojrzenie na to, co dzieje się w głowie.", "photo": {"t": 1, "u": "ekipa-victoria-floder.webp"}, "createdAt": "2025-10-01"}, {"id": "seed-09", "name": "Juls", "role": "Kierownik techniczny", "team": "Montaż i wsparcie", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Montaż i wsparcie techniczne ekipy.", "photo": {"t": 1, "u": "ekipa-juls.webp"}, "createdAt": "2026-03-01"}, {"id": "seed-11", "name": "Daniel Kisiel", "role": "PR & Advisor", "team": "Mówcy", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "Mówca — nowy głos w ekipie Myśloteki.", "photo": {"t": 0}, "createdAt": "2026-11-19"}, {"id": "seed-13", "name": "Iwo Bochenek", "role": "Prowadzący", "team": "Prowadzący", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-14", "name": "Julia Dudzińska", "role": "Prowadząca", "team": "Prowadzący", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-15", "name": "Antoni Wałejko", "role": "Prowadzący", "team": "Prowadzący", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-16", "name": "Amadeusz Sitarczyk", "role": "Montażysta", "team": "Montaż i wsparcie", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-17", "name": "Jakub Warzoła", "role": "Montażysta", "team": "Montaż i wsparcie", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-18", "name": "Krzysztof Heciak", "role": "Montażysta", "team": "Montaż i wsparcie", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-19", "name": "Franek Ryszka", "role": "Montażysta", "team": "Montaż i wsparcie", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-20", "name": "Zuzanna Zabielska", "role": "Social Media", "team": "Social Media", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}, {"id": "seed-21", "name": "Antek Sadecki", "role": "Prowadzący", "team": "Prowadzący", "circle": "TKK", "phone": "", "email": "", "album": "", "bio": "", "photo": {"t": 0}, "createdAt": "2026-11-18"}];
 window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","date":"2026-11-16"},{"id":"FpaQGGYBC90","title":"Filip i Świat Jutra | CYBERPUNK - Wszczepy, tożsamość, granica między mną a maszyną","date":"2026-11-02"},{"id":"nKTeMrcj1gQ","title":"Wydarzenie: KOGNI-ToR — cała Polska w jednym mózgu","date":"2026-10-26"},{"id":"8oaEpUSj9og","title":"Studenckie mind-blowy, czyli rozmowy o pracach naszych studentów. Praca Filipa Wiśniewskiego.","date":"2026-10-19"},{"id":"CNosXM_RM98","title":"Studenckie mind-blowy, czyli rozmowy o pracach naszych studentów. Praca Natalii Olczak","date":"2026-10-12"},{"id":"sY6YFh7bfcI","title":"Studenckie mind-blowy, czyli rozmowy o pracach naszych studentów. Praca Huberta Mizerki","date":"2026-10-05"},{"id":"cj2iLkh_DpE","title":"Czy żyjemy w symulacji? Nauka właśnie zaczyna odpowiadać. - Filip i świat jutra","date":"2026-09-21"},{"id":"wuuwbgT5dWk","title":"Studenckie mind-blowy, czyli rozmowy o pracach naszych studentów.  Praca Adrianny Kupisz","date":"2026-09-07"},{"id":"92FAwUntHJM","title":"To, kim jestem - MiksTalk","date":"2026-08-24"},{"id":"pixoTC_pvzQ","title":"Bóg 2.0 Dlaczego technologia stała się nową religią? -Filipi świat jutra","date":"2026-08-10"},{"id":"tkpOySMQRjY","title":"Zmysł czucia, jazz i manipulacja narodowa - Kogninews","date":"2026-07-27"},{"id":"Yk9kAjsbqGM","title":"Autobiografia - MiksTalk","date":"2026-07-13"},{"id":"b7SXD3Gmfng","title":"Alignment, czyli najważniejsze słowo jakiego nie znacie","date":"2026-07-01"},{"id":"AhVkN6weA24","title":"Flow neuroestetyka i AI -jak technologia zmienia nasze czucie sportu - KogniNews","date":"2026-06-08"},{"id":"As7poN-XxYk","title":"Fantazmat -  Mikstalk","date":"2026-06-01"},{"id":"Non0zdqKoD0","title":"Kod smaku i zła: Jak mózg interpretuje świat - KogniNews","date":"2026-05-25"},{"id":"Xpferucb1Bw","title":"Koniec Homo sapiens - Filip i świat jutra","date":"2026-05-18"}];
 
@@ -1131,7 +1135,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     if (list.length) {
       box.innerHTML = list.map(function (v) {
         return '<a href="https://www.youtube.com/watch?v=' + esc(v.id) + '" target="_blank" rel="noopener" style="display:flex;gap:12px;align-items:center;color:inherit;text-decoration:none;padding:8px;border-radius:12px;background:rgba(255,255,255,.05);margin-bottom:8px;">' +
-          '<img src="https://i.ytimg.com/vi/' + esc(v.id) + '/default.jpg" alt="" loading="lazy" width="96" height="72" style="width:96px;height:auto;border-radius:8px;flex:none;background:#000;">' +
+          '<img src="https://i.ytimg.com/vi/' + esc(v.id) + '/mqdefault.jpg" alt="" loading="lazy" width="112" height="63" style="width:112px;height:63px;object-fit:cover;border-radius:8px;flex:none;background:#000;">' +
           '<span style="font-size:13px;line-height:1.45;">' + esc(v.title) + '<br><small>' + esc(fmtDate(v.date)) + ' · YouTube</small></span></a>';
       }).join("");
     } else {
@@ -1256,7 +1260,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     if (tag === "MiksTalk") return "t-miks";
     if (tag === "Filip i Świat Jutra") return "t-filip";
     if (tag === "Wywiady") return "t-wyw";
-    if (tag === "Nabór") return "t-nabor";
+    if (tag === "Ekipa") return "t-ekipa";
     if (tag === "Instagram") return "t-ig";
     if (tag === "Wydarzenia specjalne") return "t-event";
     if (tag === "Mindblow") return "t-mind";
@@ -1265,7 +1269,6 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
 
   function newsBtnLabel(n) {
     var t = String((n && n.tag) || "");
-    if (t === "Nabór") return "Dołącz";
     if (t === "Instagram") return "Zobacz post";
     return "Czytaj / słuchaj";
   }
@@ -1273,6 +1276,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
   function newsCard(n, i, hl) {
     hl = hl || "h2";
     return '<div class="ncard rv d' + (i % 4) + '">' +
+      (n.img ? '<img class="nimg" src="' + esc(n.img) + '" alt="' + esc(n.imgAlt || "") + '" loading="lazy" width="785" height="441">' : "") +
       '<div><span class="tag ' + tagClass(n.tag) + '">' + esc(n.tag || "Redakcja") + '</span> ' +
       '<span class="date">' + esc(fmtDate(n.date)) + "</span></div>" +
       "<" + hl + ">" + esc(n.title) + "</" + hl + ">" +
@@ -1291,10 +1295,11 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
     }
     var first = S.news[0];
     var rest = S.news.slice(1);
-    var featImg = FORMATS[0].img;
+    var featImg = FORMATS[0].img, featAlt = "";
     for (var k = 0; k < FORMATS.length; k++) {
       if (first.tag && first.tag === FORMATS[k].t) { featImg = FORMATS[k].img; break; }
     }
+    if (first.img) { featImg = first.img; featAlt = first.imgAlt || ""; }
     featBox.innerHTML =
       '<div class="feat rv"><div class="txt">' +
       '<div><span class="tag ' + tagClass(first.tag) + '">' + esc(first.tag || "Redakcja") + '</span> ' +
@@ -1303,7 +1308,7 @@ window.BAKED_VIDS = [{"id":"xSWnNYdnacg","title":"Na co komu dziś - Mikstalk","
       "<p>" + esc(first.text) + "</p>" +
       (first.link ? '<div class="row-btns" style="justify-content:flex-start;margin-top:0;"><a class="btn" href="' + esc(first.link) + '" target="_blank" rel="noopener" aria-label="' + esc(newsBtnLabel(first) + ": " + first.title) + '">' + esc(newsBtnLabel(first)) + '</a></div>' : "") +
       "</div>" +
-      '<div class="img" style="background-image:url(\'' + esc(featImg) + '\');"></div></div>';
+      '<img class="img" src="' + esc(featImg) + '" alt="' + esc(featAlt) + '" width="785" height="596"></div>';
     box.innerHTML = rest.map(function (n, i) { return newsCard(n, i); }).join("");
     var mini = document.getElementById("miniNews");
     if (mini) mini.innerHTML = S.news.slice(0, 3).map(function (n, i) { return newsCard(n, i, "h3"); }).join("");
