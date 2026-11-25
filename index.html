@@ -2,6 +2,22 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
+<!-- Zgoda na cookies (Google Consent Mode v2): domyślnie wszystko wyłączone,
+     analityka włącza się dopiero po kliknięciu „Akceptuję” w banerze. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied", wait_for_update: 500 });
+  try { if (localStorage.getItem("myslo-consent") === "granted") gtag("consent", "update", { analytics_storage: "granted" }); } catch (e) {}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KGBV8G5M');</script>
+<!-- End Google Tag Manager -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Myśloteka — studencki podcast o mózgu</title>
 <meta name="description" content="Myśloteka — studencki podcast Koła Kognitywistycznego (UMK Toruń): neuronauka, psychologia, technologia i przyszłość. Odcinki, aktualności redakcji i ekipa.">
@@ -662,12 +678,25 @@
     .cl-ico { width: 40px; height: 40px; }
     .cl-val { font-size: 15px; }
   }
+
+  /* ---------- baner zgody na cookies ---------- */
+  .consent { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; max-width: 760px; margin: 0 auto;
+    background: #10272f; border: 1px solid rgba(84,147,163,.55); border-radius: 18px; padding: 18px 20px;
+    box-shadow: 0 18px 50px rgba(0,0,0,.5); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .consent[hidden] { display: none; }
+  .consent p { margin: 0; flex: 1 1 360px; font-size: 14px; line-height: 1.6; color: var(--cream); }
+  .consent-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .consent-btns .btn { min-height: 44px; padding: 0 18px; }
+  .linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 </style>
 </head>
 <body>
 <!-- Statyczna kopia strony Myśloteki (jeden plik, bez serwera).
      Filmy z YouTube + odtwarzacze Spotify/Instagram pobierają się na żywo.
      Newsy i ekipę edytujesz w bloku MYŚLOTEKA — TUTAJ EDYTUJESZ TREŚĆ poniżej. -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGBV8G5M" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#tresc">Przejdź do treści</a>
 <header class="masthead">
   <div class="mast-in">
@@ -912,11 +941,20 @@
     <div class="foot-bottom">
       <span>Myśloteka © 2026 — Koło Kognitywistyczne, UMK Toruń.</span>
       <span><a href="mailto:podcast.mysloteka@gmail.com" style="color:inherit;">podcast.mysloteka@gmail.com</a></span>
+      <span><button type="button" class="linkbtn" id="consentOpen">Ustawienia cookies</button></span>
       <span class="sr-only" id="newtabNote">otwiera się w nowej karcie</span>
     </div>
   </footer>
 </div>
 
+
+<div class="consent" id="consentBar" role="region" aria-label="Zgoda na pliki cookie" hidden>
+  <p id="consentTxt"><b>Liczymy odwiedziny strony.</b> Za Twoją zgodą używamy Google Analytics (pliki cookie), żeby wiedzieć, ile osób nas odwiedza i które odcinki są najchętniej oglądane. Nie używamy cookies reklamowych. Zgodę możesz zmienić w każdej chwili w stopce („Ustawienia cookies”).</p>
+  <div class="consent-btns">
+    <button type="button" class="btn sm" id="consentYes">Akceptuję</button>
+    <button type="button" class="btn sm ghost" id="consentNo">Odrzucam</button>
+  </div>
+</div>
 <div class="modal-back" id="detailBack" hidden>
   <div class="modal detail" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle" tabindex="-1"></div>
 </div>
@@ -1112,6 +1150,12 @@ window.BAKED_VIDS = [{"id":"TpjJXPKpAtg","title":"Studenckie mind-blowy, czyli r
     });
     try { document.title = ROUTE_TITLES[cur] || ROUTE_TITLES.start; } catch (e) {}
     setMenu(false);
+    /* Analityka: każda podstrona (#/odcinki itd.) liczy się jako osobna odsłona. */
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "virtual_page_view", page_path: cur === "start" ? "/" : "/" + cur,
+        page_title: document.title, page_location: location.origin + (cur === "start" ? "/" : "/" + cur) });
+    } catch (e) {}
     window.scrollTo(0, 0);
     /* Po zmianie podstrony (nie przy pierwszym wczytaniu) fokus idzie na treść —
        czytnik ekranu ogłasza nową stronę zamiast zostawać w menu. */
@@ -1750,6 +1794,22 @@ window.BAKED_VIDS = [{"id":"TpjJXPKpAtg","title":"Studenckie mind-blowy, czyli r
       e.preventDefault();
       var mn = document.getElementById("tresc"); mn.focus(); mn.scrollIntoView();
     });
+    (function () {
+      var bar = document.getElementById("consentBar");
+      function choice() { try { return localStorage.getItem("myslo-consent"); } catch (e) { return null; } }
+      function decide(v) {
+        try { localStorage.setItem("myslo-consent", v); } catch (e) {}
+        if (typeof gtag === "function") gtag("consent", "update", { analytics_storage: v === "granted" ? "granted" : "denied" });
+        if (v === "granted") { window.dataLayer.push({ event: "consent_granted" }); }
+        bar.hidden = true;
+      }
+      if (!choice()) bar.hidden = false;
+      document.getElementById("consentYes").addEventListener("click", function () { decide("granted"); });
+      document.getElementById("consentNo").addEventListener("click", function () { decide("denied"); });
+      document.getElementById("consentOpen").addEventListener("click", function () {
+        bar.hidden = false; document.getElementById("consentYes").focus();
+      });
+    })();
     document.getElementById("menuBtn").addEventListener("click", function () {
       setMenu(this.getAttribute("aria-expanded") !== "true");
     });
