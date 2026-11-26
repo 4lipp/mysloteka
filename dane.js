@@ -307,7 +307,7 @@ window.BAKED_PEOPLE = [
   },
   {
     "id": "seed-17",
-    "name": "Jakub Warzoła",
+    "name": "Jakub Worzała",
     "role": "Montażysta",
     "team": "Montaż i wsparcie",
     "circle": "TKK",
